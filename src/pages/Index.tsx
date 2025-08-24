@@ -5,6 +5,13 @@ import VideoSection from "@/components/VideoSection";
 import ProcessSection from "@/components/ProcessSection";
 import GetStartedSection from "@/components/GetStartedSection";
 import Footer from "@/components/Footer";
+import DemoChatbotsSection from "@/components/DemoChatbotsSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import PricingSection from "@/components/PricingSection";
+import IntegrationsSection from "@/components/IntegrationsSection";
+import FAQSection from "@/components/FAQSection";
+import FinalCTASection from "@/components/FinalCTASection";
+import GetThingsDoneSection from "@/components/GetThingsDoneSection";
 
 const Index = () => {
   return (
@@ -15,6 +22,13 @@ const Index = () => {
       <VideoSection />
       <ProcessSection />
       <GetStartedSection />
+      <FeaturesSection />
+      <DemoChatbotsSection />
+      <GetThingsDoneSection />
+      <PricingSection />
+      <IntegrationsSection />
+      <FAQSection />
+      <FinalCTASection />
       <Footer />
     </div>
   );

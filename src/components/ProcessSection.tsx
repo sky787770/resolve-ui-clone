@@ -1,78 +1,67 @@
 import { Button } from "@/components/ui/button";
+import { MessageCircle, FileText, TrendingUp, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProcessSection = () => {
-  const steps = [
+  const features = [
     {
-      number: "1",
-      title: "Connect and sync",
-      subtitle: "your business data",
-      description: "Connect and sync your business data",
-      color: "bg-blue-500"
+      icon: <MessageCircle className="w-8 h-8 text-blue-600" />,
+      title: "24/7 Customer Support",
+      description: "Provide instant support to your customers around the clock without hiring additional staff"
     },
     {
-      number: "2", 
-      title: "Customize and tune",
-      subtitle: "your AI Chatbot",
-      description: "Customize and tune your AI Chatbot",
-      color: "bg-purple-500"
+      icon: <FileText className="w-8 h-8 text-purple-600" />,
+      title: "Automate Lead Generation",
+      description: "Capture and qualify leads automatically through intelligent conversations and forms"
     },
     {
-      number: "3",
-      title: "Embed on your website", 
-      subtitle: "and other channels",
-      description: "Embed on your website and other channels",
-      color: "bg-indigo-500"
+      icon: <TrendingUp className="w-8 h-8 text-green-600" />,
+      title: "Boost Sales & Conversions",
+      description: "Increase your conversion rates with personalized product recommendations and assistance"
     },
     {
-      number: "4",
-      title: "Human takeover",
-      subtitle: "in case needed", 
-      description: "Human takeover in case needed",
-      color: "bg-violet-500"
+      icon: <Globe className="w-8 h-8 text-orange-600" />,
+      title: "Multilingual Support",
+      description: "Serve customers in their preferred language with automatic translation capabilities"
     }
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Label */}
-        <div className="text-center mb-4">
-          <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-            How it works
-          </span>
-        </div>
-
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
             Take your business to the next AI level
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Put your customer support on autopilot with our AI chatbot and support tools. 
-            Supercharge your business operations and empower existing employees with internal AI Agents.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Transform your customer experience with intelligent AI automation that works 24/7 to engage, 
+            convert, and support your customers across all channels.
           </p>
         </div>
 
-        {/* Process Steps */}
+        {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {steps.map((step, index) => (
+          {features.map((feature, index) => (
             <div key={index} className="text-center group cursor-pointer">
               <div className="relative mb-6">
-                <div className={`w-16 h-16 mx-auto rounded-2xl ${step.color} flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform duration-300`}>
-                  {step.number}
+                <div className="w-20 h-20 mx-auto p-4 bg-gray-50 rounded-2xl group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                  {feature.icon}
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.subtitle}</p>
+              <h3 className="text-lg font-bold text-black mb-3">{feature.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            Create your AI Chatbot
-          </Button>
+          <Link to="/signup">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg font-semibold">
+              Get Started Today
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

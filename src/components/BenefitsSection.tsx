@@ -1,18 +1,16 @@
-import engageIcon from "@/assets/engage-icon.png";
-import convertIcon from "@/assets/convert-icon.png";
-import supportIcon from "@/assets/support-icon.png";
+import { Users, TrendingUp, Headphones } from "lucide-react";
 
 const BenefitsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Let AI chatbot do the work for <span className="text-gradient">you</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+            Let AI chatbot do the work for you
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Sit back and gain the benefits of AI chatbot working for your business
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Automate customer interactions and scale your business with intelligent AI assistance
           </p>
         </div>
 
@@ -21,17 +19,13 @@ const BenefitsSection = () => {
           {/* Engage */}
           <div className="text-center group cursor-pointer">
             <div className="relative mb-6">
-              <div className="w-24 h-24 mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={engageIcon} 
-                  alt="Engage customers" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-24 h-24 mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                <Users className="w-full h-full text-purple-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-3">Engage</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Improve customer experience by engaging with your customers
+            <h3 className="text-xl font-bold text-black mb-3">Engage</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Connect with customers through meaningful conversations and personalized interactions
             </p>
           </div>
 
@@ -39,33 +33,25 @@ const BenefitsSection = () => {
           <div className="text-center group cursor-pointer">
             <div className="relative mb-6">
               <div className="w-24 h-24 mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={convertIcon} 
-                  alt="Convert customers" 
-                  className="w-full h-full object-contain"
-                />
+                <TrendingUp className="w-full h-full text-purple-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-3">Convert</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Increase conversion rate and customer satisfaction
+            <h3 className="text-xl font-bold text-black mb-3">Convert</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Turn visitors into customers with intelligent lead qualification and sales assistance
             </p>
           </div>
 
           {/* Support */}
           <div className="text-center group cursor-pointer">
             <div className="relative mb-6">
-              <div className="w-24 h-24 mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                <img 
-                  src={supportIcon} 
-                  alt="24/7 Support" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-24 h-24 mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-yellow-100 rounded-2xl group-hover:scale-105 transition-transform duration-300">
+                <Headphones className="w-full h-full text-purple-600" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-foreground mb-3">Support</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Offer automated, 24/7 natural language customer support
+            <h3 className="text-xl font-bold text-black mb-3">Support</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Provide instant, accurate support 24/7 without overwhelming your team
             </p>
           </div>
         </div>

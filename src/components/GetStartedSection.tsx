@@ -1,71 +1,80 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { FileText, File, FileSpreadsheet, Globe, Upload, MessageSquare } from "lucide-react";
 
 const GetStartedSection = () => {
-  const steps = [
-    {
-      step: "STEP 1",
-      title: "Create an account",
-      description: "Get up and running in no time, only 5 minutes setup time, free trial available to test it out without any commitment."
-    },
-    {
-      step: "STEP 2", 
-      title: "Setup your AI Chatbot",
-      description: "Connect your website pages and data sources, fine tune your AI chatbot to match to your business."
-    },
-    {
-      step: "STEP 3",
-      title: "Let AI do its magic",
-      description: "Your AI assistant will handle your time consuming tasks and free you up to focus on your business needs."
-    }
-  ];
-
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Label */}
-        <div className="text-center mb-4">
-          <span className="inline-block text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-            Easy starter
-          </span>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="max-w-xl">
+            <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+              Train your AI bot with your data
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              Upload your documents, connect your website, or integrate with your existing data sources. 
+              Our AI learns from your content to provide accurate, contextual responses that reflect your brand voice and knowledge.
+            </p>
+            
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg font-semibold">
+              <Upload className="mr-2 w-5 h-5" />
+              Upload your data
+            </Button>
+          </div>
 
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Get started fast & easy
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            It's now easier than ever to take your business to the next AI level.
-          </p>
-        </div>
-
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {steps.map((step, index) => (
-            <div key={index} className="bg-background rounded-2xl p-8 shadow-sm border border-border group hover:shadow-md transition-shadow duration-300">
-              <div className="mb-4">
-                <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">
-                  {step.step}
-                </span>
+          {/* Right Column - Data Sources Visualization */}
+          <div className="relative lg:ml-auto">
+            <div className="relative w-80 h-80 mx-auto">
+              {/* Central Chat Bubble */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center shadow-2xl">
+                  <MessageSquare className="w-12 h-12 text-white" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {step.description}
-              </p>
-              <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform duration-300">
-                <span className="text-sm font-medium">Learn more</span>
-                <ArrowRight className="ml-2 h-4 w-4" />
+              
+              {/* Document Icons in Circular Arrangement */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <FileText className="w-8 h-8 text-red-500" />
+                </div>
               </div>
+              
+              <div className="absolute top-1/4 right-0">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <File className="w-8 h-8 text-blue-500" />
+                </div>
+              </div>
+              
+              <div className="absolute bottom-1/4 right-0">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <FileSpreadsheet className="w-8 h-8 text-green-500" />
+                </div>
+              </div>
+              
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <FileText className="w-8 h-8 text-purple-500" />
+                </div>
+              </div>
+              
+              <div className="absolute bottom-1/4 left-0">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <File className="w-8 h-8 text-orange-500" />
+                </div>
+              </div>
+              
+              <div className="absolute top-1/4 left-0">
+                <div className="w-16 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center border-2 border-gray-200">
+                  <Globe className="w-8 h-8 text-indigo-500" />
+                </div>
+              </div>
+              
+              {/* Connecting Lines */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 320 320">
+                <circle cx="160" cy="160" r="120" fill="none" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="5,5"/>
+              </svg>
             </div>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-            Start free trial
-          </Button>
+          </div>
         </div>
       </div>
     </section>

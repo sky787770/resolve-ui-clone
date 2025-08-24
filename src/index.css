@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ResolveAI Design System - Exact replica colors and styles */
+/* LaPCY AI Design System - Exact replica colors and styles */
 
 @layer base {
   :root {
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 10% 23%;
 
-    /* ResolveAI Purple/Blue theme */
+    /* LaPCY AI Purple/Blue theme */
     --primary: 237 100% 68%;
     --primary-foreground: 0 0% 100%;
 
@@ -37,7 +37,7 @@
 
     --radius: 0.75rem;
 
-    /* ResolveAI specific colors */
+    /* LaPCY AI specific colors */
     --resolve-purple: 270 95% 75%;
     --resolve-blue: 237 100% 68%;
     --resolve-gradient: linear-gradient(135deg, hsl(270 95% 75%), hsl(237 100% 68%));
