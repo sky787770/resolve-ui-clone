@@ -13,6 +13,10 @@ import NewChatbot from "./pages/NewChatbot";
 import TrainFromLink from "./pages/TrainFromLink";
 import ProfileDashboard from "./pages/ProfileDashboard";
 import ChatbotPage from "./pages/ChatbotPage";
+import Settings from "./pages/Settings";
+import Appearance from "./pages/Appearance";
+import TextTraining from "./pages/TextTraining";
+import QAPage from "./pages/QAPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +38,12 @@ const App = () => (
           <Route path="/train" element={<TrainFromLink />} />
           <Route path="/profile" element={<ProfileDashboard />} />
           <Route path="/chatbot/:chatbotId" element={<ChatbotPage />} />
+          <Route path="/settings/:chatbotId" element={<Settings />} />
+          <Route path="/appearance/:chatbotId" element={<Appearance />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/text-training/:chatbotId" element={<TextTraining />} />
+          <Route path="/text" element={<TextTraining />} />
+          <Route path="/qa/:chatbotId" element={<QAPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

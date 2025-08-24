@@ -62,7 +62,7 @@ const TrainFromLink = () => {
               <ArrowLeft className="w-4 h-4" />
               Bots
             </Link>
-            <div className="text-lg font-semibold text-gray-900">SaasPedia</div>
+            <div className="text-lg font-semibold text-gray-900">Your Chatbot Name</div>
             <div className="text-sm text-gray-500">clzmepc25e1</div>
           </div>
           
@@ -141,6 +141,10 @@ const TrainFromLink = () => {
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
                   <Zap className="w-5 h-5 text-gray-600" />
                   <span className="text-sm font-medium text-gray-700">Integrations</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <Zap className="w-5 h-5 text-gray-600" />
+                  <span className="text-sm font-medium text-gray-700">Settings</span>
                 </div>
               </div>
             </div>
